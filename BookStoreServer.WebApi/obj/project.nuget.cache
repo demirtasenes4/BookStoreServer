@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CAczoJ8oQ8vsu8RZ92qFPmWxTdjW61NJ/IldoLRcGaPO2WLfZK/eECY2DhFHvMqUG+Jq0L68Pu5gDJneqMXRnQ==",
+  "dgSpecHash": "kUx6ataQ+RskHzR9P/vTLom0Hnjg90X181sUeYDRvCIJYfFfitE2s56rcupwE+DK/5qK+CR6sTryCj6cWpUVxw==",
   "success": true,
   "projectFilePath": "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,7 @@
     "C:\\Users\\vatan\\.nuget\\packages\\expressionevaluator\\2.0.4\\expressionevaluator.2.0.4.nupkg.sha512",
     "C:\\Users\\vatan\\.nuget\\packages\\gsf.core\\2.4.28\\gsf.core.2.4.28.nupkg.sha512",
     "C:\\Users\\vatan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\vatan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "C:\\Users\\vatan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
     "C:\\Users\\vatan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\vatan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\vatan\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
