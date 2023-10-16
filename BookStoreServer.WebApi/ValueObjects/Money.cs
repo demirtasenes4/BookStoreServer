@@ -1,8 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
+﻿namespace BookStoreServer.WebApi.ValueObjects;
 
-namespace BookStoreServer.WebApi.ValueObjects;
-
-public sealed class Money
+public sealed class Money //ValueObject
 {
     public Money(decimal value, string currency)
     {
@@ -10,6 +8,6 @@ public sealed class Money
         Currency = currency;
     }
 
-    public decimal Value { get; private set; }
-    public string Currency { get; private set; }
+    public decimal Value { get; private init; }
+    public string Currency { get; private init; }
 }
