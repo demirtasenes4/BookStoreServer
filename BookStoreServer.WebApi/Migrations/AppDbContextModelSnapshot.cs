@@ -17,7 +17,7 @@ namespace BookStoreServer.WebApi.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("ProductVersion", "7.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -31,18 +31,15 @@ namespace BookStoreServer.WebApi.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Author")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CoverImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ISBN")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
@@ -55,11 +52,9 @@ namespace BookStoreServer.WebApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Summary")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -97,7 +92,6 @@ namespace BookStoreServer.WebApi.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -110,141 +104,167 @@ namespace BookStoreServer.WebApi.Migrations
                             Id = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Horror"
+                            Name = "Korku"
                         },
                         new
                         {
                             Id = 2,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Science-Fiction"
+                            Name = "Bilim Kurgu"
                         },
                         new
                         {
                             Id = 3,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "History"
+                            Name = "Tarih"
                         },
                         new
                         {
                             Id = 4,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Literature"
+                            Name = "Edebiyat"
                         },
                         new
                         {
                             Id = 5,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Kids"
+                            Name = "Çocuk"
                         },
                         new
                         {
                             Id = 6,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Psychology"
+                            Name = "Psikoloji"
                         },
                         new
                         {
                             Id = 7,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Technology"
+                            Name = "Din"
                         },
                         new
                         {
                             Id = 8,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Philosophy"
+                            Name = "Felsefe"
                         },
                         new
                         {
                             Id = 9,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Science"
+                            Name = "Bilim"
                         },
                         new
                         {
                             Id = 10,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Art"
+                            Name = "Sanat"
                         },
                         new
                         {
                             Id = 11,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Sports"
+                            Name = "Spor"
                         },
                         new
                         {
                             Id = 12,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Travel"
+                            Name = "Gezi"
                         },
                         new
                         {
                             Id = 13,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Magazine"
+                            Name = "Dergi"
                         },
                         new
                         {
                             Id = 14,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Humour"
+                            Name = "Mizah"
                         },
                         new
                         {
                             Id = 15,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Self-Improvement"
+                            Name = "Kişisel Gelişim"
                         },
                         new
                         {
                             Id = 16,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "World-Cuisines"
+                            Name = "Yemek"
                         },
                         new
                         {
                             Id = 17,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Hobby"
+                            Name = "Hobi"
                         },
                         new
                         {
                             Id = 18,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Reference"
+                            Name = "Referans"
                         },
                         new
                         {
                             Id = 19,
                             IsActive = true,
                             IsDeleted = false,
-                            Name = "Education"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            IsActive = true,
-                            IsDeleted = false,
-                            Name = "Games"
+                            Name = "Eğitim"
                         });
+                });
+
+            modelBuilder.Entity("BookStoreServer.WebApi.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OrderNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("BookStoreServer.WebApi.Models.Book", b =>
@@ -255,7 +275,6 @@ namespace BookStoreServer.WebApi.Migrations
                                 .HasColumnType("int");
 
                             b1.Property<string>("Currency")
-                                .IsRequired()
                                 .HasMaxLength(5)
                                 .HasColumnType("nvarchar(5)");
 
@@ -270,8 +289,7 @@ namespace BookStoreServer.WebApi.Migrations
                                 .HasForeignKey("BookId");
                         });
 
-                    b.Navigation("Price")
-                        .IsRequired();
+                    b.Navigation("Price");
                 });
 
             modelBuilder.Entity("BookStoreServer.WebApi.Models.BookCategory", b =>
@@ -291,6 +309,39 @@ namespace BookStoreServer.WebApi.Migrations
                     b.Navigation("Book");
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("BookStoreServer.WebApi.Models.Order", b =>
+                {
+                    b.HasOne("BookStoreServer.WebApi.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsOne("BookStoreServer.WebApi.ValueObjects.Money", "Price", b1 =>
+                        {
+                            b1.Property<int>("OrderId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Currency")
+                                .HasMaxLength(5)
+                                .HasColumnType("nvarchar(5)");
+
+                            b1.Property<decimal>("Value")
+                                .HasColumnType("money");
+
+                            b1.HasKey("OrderId");
+
+                            b1.ToTable("Orders");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrderId");
+                        });
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Price");
                 });
 #pragma warning restore 612, 618
         }

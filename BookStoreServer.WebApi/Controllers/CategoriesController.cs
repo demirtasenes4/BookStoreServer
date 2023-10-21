@@ -8,14 +8,14 @@ namespace BookStoreServer.WebApi.Controllers;
 
 [Route("api/[controller]/[action]")]
 [ApiController]
-public class CategoriesController : ControllerBase
+public sealed class CategoriesController : ControllerBase
 {
     [HttpPost]
     public IActionResult Create(CreateCategoryDto request)
     {
         AppDbContext context = new();
         var checkNameIsUnique = context.Categories.Any(p => p.Name == request.Name);
-        if (checkNameIsUnique)
+        if(checkNameIsUnique)
         {
             return BadRequest("Kategori adı daha önce kullanılmıştır.");
         }
@@ -26,7 +26,7 @@ public class CategoriesController : ControllerBase
             IsActive = true,
             IsDeleted = false
         };
-
+        
         context.Categories.Add(category);
         context.SaveChanges();
         return Ok(category);
@@ -51,7 +51,7 @@ public class CategoriesController : ControllerBase
     {
         AppDbContext context = new();
         Category category = context.Categories.Find(request.Id);
-        if (category == null)
+        if(category == null)
         {
             return NotFound();
         }

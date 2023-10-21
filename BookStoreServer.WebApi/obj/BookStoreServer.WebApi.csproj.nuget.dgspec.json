@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj": {}
+    "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore-Training\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj": {
+    "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore-Training\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore-Training\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj",
         "projectName": "BookStoreServer.WebApi",
-        "projectPath": "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj",
+        "projectPath": "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore-Training\\BookStoreServer\\BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj",
         "packagesPath": "C:\\Users\\vatan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\vatan\\Documents\\YMYP-Angular-main\\BookStore-Training\\BookStoreServer\\BookStoreServer.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vatan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,23 +52,23 @@
               "target": "Package",
               "version": "[2.4.28, )"
             },
+            "Iyzipay": {
+              "target": "Package",
+              "version": "[2.1.55, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

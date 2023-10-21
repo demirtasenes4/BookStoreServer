@@ -8,7 +8,7 @@ namespace BookStoreServer.WebApi.Controllers;
 
 [Route("api/[controller]/[action]")]
 [ApiController]
-public class BooksController : ControllerBase
+public sealed class BooksController : ControllerBase
 {
     [HttpPost]
     public IActionResult GetAll(RequestDto request)
@@ -27,9 +27,9 @@ public class BooksController : ControllerBase
         else
         {
             books = context.BookCategories
-                .Where(p => p.CategoryId == request.CategoryId)
-                .Include(p => p.Book)
-                .Select(s => s.Book)
+                .Where(p=> p.CategoryId == request.CategoryId)
+                .Include(p=> p.Book)
+                .Select(s=> s.Book)
                 .Where(p => p.IsActive == true && p.IsDeleted == false)
                 .Where(p => p.Title.ToLower().Contains(request.Search.ToLower()) || p.ISBN.Contains(request.Search))
                 .OrderByDescending(p => p.CreateAt)
